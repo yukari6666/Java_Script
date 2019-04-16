@@ -1,0 +1,78 @@
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charser="utf8">
+  <title></title>
+
+</head>
+<style>
+  /* .red {
+    color: red;
+  } */
+</style>
+
+<body>
+  <!-- ID: <input type="text" id="ID">
+  <br>
+  PASS: <input type="text" id="PASS">
+  <input type="button" value="로그인" id="login"> -->
+  <!-- <input type="text" id='numberarea'>
+  <input type=button value="구구단" id="button">
+  <br>
+  <span id='numberArea'></span> -->
+
+  <span id='loginformArear'></span>
+  <br>
+  <input id='formationAre' a type=button value="로그인 양식 씌우기" id="button">
+  <br>
+
+
+
+</body>
+<script>
+  // document.getElementById("login").addEventListener('click', function() {
+  // if ((document.getElementById("ID").value == "polytech") && (document.getElementById("PASS").value == "12341234")) {
+  // console.log("로그인 성공");
+  // } else {0
+  // console.log("로그인 실패");
+  // }
+  // });
+
+  // for (var i = 0; i < 11; i++) { // if(i==0){ // console.log("0입니다.") // } else if(i <5){ // console.log(i); // } else if(i < 11){ // console.log(i); // }else if(i==10){ // console.log(i); // } // }; // for (var i=1; i <101; i++){ // if
+  // console.log(i); // }else if(i>11){
+  // console.log("출력완료");
+  // break;
+  // }
+  // };
+
+  // for (var i =1; i<11; i++){ // if(i==1){ // console.log(i); // }else if(i%2==0){ // console.log(i); // }else if(i%3==0){ // console.log(i); // }else{ // console.log(i); // } // }; // for(var i=1; i < 11; i++){ // if(i==1){ //
+  // }else{ // console.log(i); // } // }; for (i=1; i < 101 i++){ if(i < i+10){ console.log(i); } }
+
+  // var numberText = '<input type = "text">';
+  // for (var i = 1; i < 101; i++) {
+  //   if(i % 10 == 0){
+  //     numberText += i+'<br>';
+  //   }else{
+  //     numberText += i+" ";
+  //   }
+  // };
+
+  // var printText = '<type = text>'
+  // document.getElementById("button").addEventListener('click', function() {
+  //   var inputNum = document.getElementById('numberarea').value
+  //   document.getElementById('numberArea').innerHTML = printText;
+  //       for (var i = inputNum; i == inputNum;  i++) {
+  //         for (var j = 1; j < 101; j++) {
+  //           printText = printText + (i +" "+" X "+" " + j + " " +"=" + " " + (i * j) + '<br>')
+  //         }
+  //       }});
+  // document.getElementById('numberarea').innerHTML = numberText;
+
+  var printText = '<type = text>'
+  document.getElementById("formationAre").addEventListener('click', function() {
+    document.getElementById('loginformArear').innerHTML = 'ID<input type = "text">' +
+      '<br>PASS<input type = "text"><br><input type = "button" value = "로그인">'
+  });
+</script>
+
+</html>

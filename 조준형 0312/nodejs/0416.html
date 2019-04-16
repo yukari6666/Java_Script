@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+  </style>
+</head>
+
+<body>
+  <!-- 라디오 객체의 이름이 같으면 배열로 취급된다. name ='통일1' 끼리는 배열로 취급.  -->
+  <!-- .checked 문을 통해 true인지 false인지 판단할 수 있다. -->
+  1번 0<input type="radio" name="radioBtn1">
+  1<input type="radio" name="radioBtn1">
+  2<input type="radio" name="radioBtn1">
+  3<input type="radio" name="radioBtn1">
+  4<input type="radio" name="radioBtn1">
+  가중치<input type = "text"  id="text1">
+  <br>
+  2번 0<input type="radio" name="radioBtn2">
+  1<input type="radio" name="radioBtn2">
+  2<input type="radio" name="radioBtn2">
+  3<input type="radio" name="radioBtn2">
+  4<input type="radio" name="radioBtn2">
+  가중치<input type = "text"  id="text2">
+  <br>
+  3번 0<input type="radio" name="radioBtn3">
+  1<input type="radio" name="radioBtn3">
+  2<input type="radio" name="radioBtn3">
+  3<input type="radio" name="radioBtn3">
+  4<input type="radio" name="radioBtn3">
+  가중치<input type="text" id="text3">
+  <br>
+  <sp id = "re"></sp>
+  <br>
+  <button type="button" value= "계산" id='btn'>계산</button>
+  <script>
+    // var cars = [];
+    // var car1 = {};
+    // var car2 = {};
+    // car1.color = "red";
+    // car1.weight = "50kg";
+    // car1.number = 12341234;
+    // car1.kind = "소나타";
+    // car1.accidentHistory = [];
+    // car1.accidentHistory[0] = '2011-03-01';
+    // car1.accidentHistory[1] = '2013-34-05';
+    // car2.name = "avc";
+    // car2.avc = 123;
+    //
+    // cars[0] = car1, car2[1] = car2;
+    // cars[2] = {
+    //   name: "avc",
+    //   age: 123
+    // }
+    // console.log(cars);
+    //      //document.getElementById = Id는 하나이기 때문에.
+          //document.getElementsByName = Neme은 여러개일 수 있기 때문에.
+    document.getElementById('btn').addEventListener('click', function() {
+      var radios1 = document.getElementsByName('radioBtn1');
+      var radios2 = document.getElementsByName('radioBtn2');
+      var radios3 = document.getElementsByName('radioBtn3');
+      var multy1 = Number(document.getElementById('text1').value);
+      var multy2 = Number(document.getElementById('text2').value);
+      var multy3 = Number(document.getElementById('text3').value);
+      var result = 0;
+      // for문을 통해 배열 속 값들을 받아온다.
+      for(var i = 0; i<radios1.length; i++){
+        if(radios1[i].checked == true){
+          var rad1 = i;
+        }
+      }
+      for(var i = 0; i<radios2.length; i++){
+        if(radios2[i].checked == true){
+          var rad2 = i;
+        }
+      }
+      for(var i = 0; i< radios3.length; i++){
+        if(radios3[i].checked == true){
+          var rad3 = i;
+        }
+      }
+      //result 변수 안에 for문으로 받아온 값이 담긴 변수와 id로 불러온 값을 서로 곱한 최종 값을 내어 담는다.
+      result = (rad1*multy1)+(rad2*multy2)+(rad3*multy3);
+      document.getElementById('re').innerHTML = `${rad1} x ${multy1} + ${rad2} x ${multy2} + ${rad3} x ${multy3} = ${result}`
+    });
+  </script>
+</body>
+
+</html>
